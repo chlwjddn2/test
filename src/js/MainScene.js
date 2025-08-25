@@ -13,12 +13,12 @@ export default class MainScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.spritesheet('alphabet', '/alphabet.png', {
+    this.load.spritesheet('alphabet', '/test/alphabet.png', {
       frameWidth: 40,
       frameHeight: 40,
     });
 
-    this.load.image('arrow', '/arrow.png');
+    this.load.image('arrow', '/test/arrow.png');
   }
 
   create() {
