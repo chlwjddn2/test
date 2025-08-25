@@ -43,6 +43,21 @@ export default class MainScene extends Phaser.Scene {
       this.#lastSpawnTime = time;
     }
     this.destroyBall();
+
+    const pointer = this.input.activePointer;
+
+    // // 고정된 화살 위치
+    const baseX = this.arrow.arrow.x;
+    const baseY = this.arrow.arrow.y;
+    
+    // // 마우스까지의 벡터
+    const dx = pointer.x - baseX;
+    const dy = pointer.y - baseY;
+
+    // // 화살을 마우스로 회전
+    const angle = Math.atan2(dy, dx);
+    this.arrow.arrow.rotation = angle + Math.PI / 2; // 🔧 화살촉이 마우스를 향하게 회전
+    // // ↖️ Phaser는 0도 방향이 오른쪽이므로, -90도 보정
   }
 
   spawnBall() {

@@ -7,6 +7,11 @@ export default class Arrow {
     this.arrow.setOrigin(0.5, 1)
   }
 
+  preUpdate() {
+    console.log('ssssss');
+    
+  }
+
   // 포물선 설정
   spawnBall(isLeft) {
     const gravityY = 800;
