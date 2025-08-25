@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://chlwjddn2.github.io/test-app/",
+  "homepage": "https://chlwjddn2.github.io/test/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
